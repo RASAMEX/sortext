@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Raffle</title>
+    <link rel="stylesheet" href="{% static 'css/styles_index.css' %}">
+</head>
+<body>
+    <h1>Create Raffle</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Raffle</button>
+    </form>
+</body>
+</html>

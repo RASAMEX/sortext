@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family:'Courier New', Courier, monospace; 
+    background-color: black;
+    color: green;
+    display: block;
+    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-rows: 2fr 1fr; 
+    height: auto;
+}
+form {
+    width: 50%;
+}
+button {
+    background-color: green;
+    color: white; 
+    padding: 5px; 
+    border-radius: 2px;
+}
+input {
+    width: 60%;
+}

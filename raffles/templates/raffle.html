@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sortex</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles_raffle.css' %}">
+</head>
+<body>
+    <div class="participants">
+        {% include 'participants_table.html' %}
+    </div>
+    <div class="raffle">
+
+        <div class="title">
+            <h1>{{ raffle.name }}</h1>
+        </div>
+
+        <div class="raffle_st">
+            <div class="slot-machine">
+                <ul class="slot" id="slot1"></ul>
+                <ul class="slot" id="slot2"></ul>
+                <ul class="slot" id="slot3"></ul>
+              </div>
+        </div>
+
+        <div class="div_button"> 
+            <button id="spin_button">Spin</button>  
+            <button id="spin_button2">Until Someone Wins</button>
+        </div>    
+
+        <div class="div_controls"> 
+            <div>
+                <label for="level">Level:</label>
+                <select id="level">
+                    <option value="soft">Soft</option>
+                    <option value="half">Half</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="checkbox" id="elimination">
+                <label for="elimination">Elimination</label>
+            </div>          
+            
+            <div>
+                <input type="checkbox" id="two_out_of_three">
+                <label for="two_out_of_three">2 out of 3</label>
+            </div> 
+        </div> 
+    </div>
+    <div class="details">
+        <p>
+            Soft: The three results are calculated randomly with a bias towards participants with more tickets. (Not recommended when everyone has the same number of tickets)
+        </p>    
+        <p>Half: Two of the three results are calculated randomly with a bias towards participants with more tickets. (Not recommended when everyone has the same number of tickets)</p>
+        <p>Hard: The three results are calculated randomly with different algorithms for each.</p>
+        <p>Elimination: Tickets are subtracted from participants, and the participant without tickets is eliminated. (Inverts the criteria of Soft and Half so that the bias is towards participants with fewer tickets).</p>
+        <p>2 out of 3: Only two matches are needed to declare a winner (Minimum 3 participants).</p> 
+    </div>
+    <div id="terminal" class="terminal">
+        <p style="overflow-y: auto; white-space: pre-wrap; word-wrap: break-word;" id="output_text"></p>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let updateParticipantsURL = '{% url 'update_participants' raffle.id %}';
+        let raffle_id = '{{ raffle.id }}';
+    </script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

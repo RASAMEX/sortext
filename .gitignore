@@ -1,0 +1,33 @@
+# Configuration files specific to your development environment
+.vscode/
+
+# Automatically generated directories and files
+__pycache__/
+__init__.py
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.sqlite3
+
+# Migration directory
+*/migrations/
+
+# Log files and temporary files generated during execution
+/logs/
+/temp/
+
+# Cache files
+__pycache__/
+.cache/
+
+# Local environment files 
+.env
+
+# Log file 
+*.log
+
+# Documentation folder
+/docs/
+
+# Other specific files or directories in your project that you want to ignore

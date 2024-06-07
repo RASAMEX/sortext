@@ -1,0 +1,22 @@
+<table id="participants-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Tickets</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for participant in participants %}
+            <tr {% if participant.status == 'Disqualified' %} style="text-decoration: line-through; color:red" {% endif %}>
+                <td>
+                    {{ participant.id }}
+                </td>
+                <td>
+                    {{ participant.name }}
+                </td>
+                <td style="text-align: center;">{{ participant.valid_tickets }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

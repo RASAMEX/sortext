@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sortex</title>
+    <link rel="stylesheet" href="{% static 'css/styles_index.css' %}">
+</head>
+<body>
+    <div class="app-name">
+        <h1 class="title">Sortex</h1>
+    </div>
+    
+    <ul class="raffles-list">
+        {% for raffle in raffles %}
+            <li><a href="{% url 'raffle_details' raffle.id %}">{{ raffle.name }}</a></li>
+        {% endfor %}
+            <li><a href="{% url 'create_raffle' %}">+ New</a></li>
+    </ul>
+    <div class="padding-box">
+        <p class="by-rasamex">by rasamex</p>
+    </div>
+</body>
+</html>

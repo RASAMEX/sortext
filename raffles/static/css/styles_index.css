@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+}
+
+.app-name {
+    text-align: center;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 100%;
+    border-right: solid 1px green;
+    box-shadow: 2px -12px 10px 1px green;
+}
+
+.title {
+    text-shadow: 5px 0px 10px green;
+}
+
+.raffles-list {
+    border-right: dashed 2px green;
+    border-top: dashed 2px green;
+    border-bottom: dashed 2px green;
+    list-style: none;
+    padding: .3rem;
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+
+.raffles-list li {
+    margin-bottom: 10px;
+}
+
+.raffles-list a {
+    text-decoration: none;
+    color: green;
+    font-size: 1.2em;
+}
+
+.divider {
+    height: 100%;
+    width: 2px;
+    background-color: green;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.padding-box {
+    background-color: black;
+    grid-column: span 2;
+    padding: 0;
+}
+
+.by-rasamex {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 1rem;
+}
