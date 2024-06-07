@@ -55,7 +55,7 @@ Ensure you have configured your Django settings correctly, including the databas
     Open your browser and go to `http://127.0.0.1:8000/` to access the main page displaying all raffles.
 
 2. **Create a Raffle**:
-    Use the + New button to create a new raffle and upload a participant list.
+    Use the + New button to create a new raffle and upload a participant list [example_file.xlsx](/example_file.xlsx).
 
 3. **Run the Raffle**:
     Follow the instructions on the interface to operate the raffle.
